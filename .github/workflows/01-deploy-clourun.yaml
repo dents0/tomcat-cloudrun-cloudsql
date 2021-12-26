@@ -52,5 +52,5 @@ jobs:
             --set-env-vars DB_USER=${SQL_DB_USER} \
             --set-env-vars DB_PASS=${SQL_DB_PASS} \
             --set-env-vars DB_HOST=${SQL_PRIVATE_IP} \
-            --set-env-vars DB_PORT="5432"
-            --allow-unauthenticated \
+            --set-env-vars DB_PORT="5432" \
+            --allow-unauthenticated
