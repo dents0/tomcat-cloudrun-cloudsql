@@ -102,6 +102,9 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <from>
+                        <image>tomcat:9.0.56-jre11-openjdk-slim-buster</image>
+                    </from>
                     <to>
                         <image>${env.AR_HOST}${env.AR_REPO}${env.IMG_NAME}</image>
                         <tags>${env.IMG_TAG}</tags>
