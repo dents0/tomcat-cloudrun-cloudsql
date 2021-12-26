@@ -46,6 +46,7 @@ public class ConnectionPoolContextListener implements ServletContextListener {
 
         // The configuration object specifies behaviors for the connection pool.
         HikariConfig config = new HikariConfig();
+        config.setDriverClassName(org.postgresql.Driver.class.getName());
 
         // The following URL is equivalent to setting the config options below:
         // jdbc:postgresql:///<DB_NAME>?cloudSqlInstance=<INSTANCE_CONNECTION_NAME>&
