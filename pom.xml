@@ -7,14 +7,13 @@
     <groupId>org.gcp.showcase</groupId>
     <artifactId>showcase-java-cloudrun</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>tomcat-java-cloudrun</name>
+    <name>Tabs vs Spaces</name>
     <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
-        <java.image>tomcat:9.0.56-jre11-openjdk-slim-buster</java.image>
     </properties>
 
     <dependencies>
