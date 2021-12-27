@@ -36,11 +36,9 @@ jobs:
       - name: Build and Push to GCR
         uses: raccoondev/push-docker-gcr@v1
         with:
-          gcr_host: ${DOCKER_WF_HOST}
-          image_name: ${DOCKER_WF_IMG}
+          gcr_host: ${{ secrets.DOCKER_WF_HOST }}
+          image_name: ${{ secrets.DOCKER_WF_IMG }}
           image_tag: ${{ github.event.inputs.build_number }}
         env:
           GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
           GOOGLE_PROJECT_ID: ${{ secrets.GCP_CREDENTIALS }}
-          DOCKER_WF_HOST: ${{ secrets.DOCKER_WF_HOST }}
-          DOCKER_WF_IMG: ${{ secrets.DOCKER_WF_IMG }}
