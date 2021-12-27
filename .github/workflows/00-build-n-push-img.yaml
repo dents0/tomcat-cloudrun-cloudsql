@@ -37,7 +37,7 @@ jobs:
           AR_HOST: ${{ secrets.AR_HOST }}
           AR_REPO: ${{ secrets.AR_REPO }}
           IMG_NAME: ${{ secrets.IMG_NAME }}
-          IMG_TAG: ${{ secrets.IMG_TAG }}
+          IMG_TAG: ${{ github.event.inputs.build_number }}
         run: |-
           docker image build \
             -t ${AR_HOST}${AR_REPO}${IMG_NAME}:${IMG_TAG} \
