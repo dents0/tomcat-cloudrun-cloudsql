@@ -86,43 +86,6 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-deploy-plugin</artifactId>-->
-<!--                <version>3.0.0-M1</version>-->
-<!--                <executions>-->
-<!--                    &lt;!&ndash;  Disable standard Maven artifact JAR deploy  &ndash;&gt;-->
-<!--                    <execution>-->
-<!--                        <id>default-deploy</id>-->
-<!--                        <phase>none</phase>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>com.google.cloud.tools</groupId>-->
-<!--                <artifactId>jib-maven-plugin</artifactId>-->
-<!--                <version>3.1.4</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>deploy</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>build</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <from>-->
-<!--                        <image>tomcat:9.0.56-jre11-openjdk-slim-buster</image>-->
-<!--                    </from>-->
-<!--                    <to>-->
-<!--                        <image>${env.AR_HOST}${env.AR_REPO}${env.IMG_NAME}</image>-->
-<!--                        <tags>${env.IMG_TAG}</tags>-->
-<!--                    </to>-->
-<!--                    <container>-->
-<!--                        <appRoot>/usr/local/tomcat/webapps/ROOT</appRoot>-->
-<!--                    </container>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 </project>
