@@ -33,12 +33,15 @@ jobs:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
 
-      - name: Build and Push to GCR
-        uses: raccoondev/push-docker-gcr@v1
+      - name: Build and push
+        uses: docker/build-push-action@v2
         with:
-          gcr_host: ${{ secrets.DOCKER_WF_HOST }}
-          image_name: ${{ secrets.DOCKER_WF_IMG }}
-          image_tag: ${{ github.event.inputs.build_number }}
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${AR_HOST}${AR_REPO}${IMG_NAME}:${IMG_TAG}
         env:
-          GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          GOOGLE_PROJECT_ID: ${{ secrets.GCP_CREDENTIALS }}
+          AR_HOST: ${{ secrets.AR_HOST }}
+          AR_REPO: ${{ secrets.AR_REPO }}
+          IMG_NAME: ${{ secrets.IMG_NAME }}
+          IMG_TAG: ${{ github.event.inputs.image_tag }}
